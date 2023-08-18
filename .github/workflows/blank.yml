@@ -32,7 +32,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          docker pull kong/kubernetes-ingress-controller:2.11
+          docker pull kong:3.3
           docker login --username=${{secrets.USERNAME}} --password=${{secrets.PASSWORD}} registry.cn-guangzhou.aliyuncs.com
-          docker tag kong/kubernetes-ingress-controller:2.11 registry.cn-guangzhou.aliyuncs.com/pullkong/kong-k8s-ingress:2.11
-          docker push registry.cn-guangzhou.aliyuncs.com/pullkong/kong-k8s-ingress:2.11
+          docker tag kong:3.3 registry.cn-guangzhou.aliyuncs.com/pullkong/kong:3.3
+          docker push registry.cn-guangzhou.aliyuncs.com/pullkong/kong:3.3
