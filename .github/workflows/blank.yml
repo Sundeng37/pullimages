@@ -34,5 +34,5 @@ jobs:
         run: |
           docker pull kong/kubernetes-ingress-controller:2.11
           docker login --username=${{secrets.USERNAME}} --password=${{secrets.PASSWORD}} registry.cn-guangzhou.aliyuncs.com
-          docker tag kong/kubernetes-ingress-controller:2.11 registry.cn-guangzhou.aliyuncs.com/metricsserver/metrics-server:2.11
-          docker push registry.cn-guangzhou.aliyuncs.com/metricsserver/metrics-server:2.11
+          docker tag kong/kubernetes-ingress-controller:2.11 registry.cn-guangzhou.aliyuncs.com/pullkong/kong-k8s-ingress:2.11
+          docker push registry.cn-guangzhou.aliyuncs.com/pullkong/kong-k8s-ingress:2.11
